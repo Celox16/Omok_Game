@@ -60,6 +60,11 @@ namespace Client
 
         private void boardPicture_MouseDown(object sender, MouseEventArgs e) // 오목판을 클릭했을때의 이벤트
         {
+            if (!playing)
+            {
+                MessageBox.Show("게임을 시작해주세요");
+                return;
+            }
             Graphics g = this.boardPicture.CreateGraphics(); // 그림을 그리기위한 객체
             int x = e.X / rectSize; // 현재 사용자가 클릭한 셀의 위치가 어디인지 계산함
             int y = e.Y / rectSize; // 0 ~ 14로 제한하게 됨
@@ -94,7 +99,7 @@ namespace Client
             }
             else
             {
-                nowPlayer = ((nowPlayer == Horse.BLACK) ? Horse.WHITE : Horse.BLACK);
+                nowPlayer = ((nowPlayer == Horse.BLACK) ? Horse.WHITE : Horse.BLACK); // 플레이어 넘기기
                 status.Text = nowPlayer.ToString() + "플레이어의 차례입니다.";
             }
         }
