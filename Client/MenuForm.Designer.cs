@@ -32,6 +32,7 @@ namespace Client
             this.label1 = new System.Windows.Forms.Label();
             this.siglePlayButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.multiPlayButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -44,7 +45,7 @@ namespace Client
             // 
             // siglePlayButton
             // 
-            this.siglePlayButton.Location = new System.Drawing.Point(246, 125);
+            this.siglePlayButton.Location = new System.Drawing.Point(246, 87);
             this.siglePlayButton.Name = "siglePlayButton";
             this.siglePlayButton.Size = new System.Drawing.Size(100, 40);
             this.siglePlayButton.TabIndex = 1;
@@ -54,7 +55,7 @@ namespace Client
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(246, 207);
+            this.exitButton.Location = new System.Drawing.Point(246, 236);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(100, 40);
             this.exitButton.TabIndex = 2;
@@ -62,11 +63,22 @@ namespace Client
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // multiPlayButton
+            // 
+            this.multiPlayButton.Location = new System.Drawing.Point(246, 168);
+            this.multiPlayButton.Name = "multiPlayButton";
+            this.multiPlayButton.Size = new System.Drawing.Size(100, 40);
+            this.multiPlayButton.TabIndex = 3;
+            this.multiPlayButton.Text = "함께하기";
+            this.multiPlayButton.UseVisualStyleBackColor = true;
+            this.multiPlayButton.Click += new System.EventHandler(this.multiPlayButton_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.multiPlayButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.siglePlayButton);
             this.Controls.Add(this.label1);
@@ -82,6 +94,7 @@ namespace Client
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button siglePlayButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button multiPlayButton;
     }
 }
 

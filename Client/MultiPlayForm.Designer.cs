@@ -1,7 +1,7 @@
 ﻿
 namespace Client
 {
-    partial class SinglePlayForm
+    partial class MultiPlayForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +30,9 @@ namespace Client
         private void InitializeComponent()
         {
             this.boardPicture = new System.Windows.Forms.PictureBox();
+            this.roomTextBox = new System.Windows.Forms.TextBox();
+            this.enterButton = new System.Windows.Forms.Button();
             this.playButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.status = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.boardPicture)).BeginInit();
             this.SuspendLayout();
@@ -47,45 +48,54 @@ namespace Client
             this.boardPicture.Paint += new System.Windows.Forms.PaintEventHandler(this.boardPicture_Paint);
             this.boardPicture.MouseDown += new System.Windows.Forms.MouseEventHandler(this.boardPicture_MouseDown);
             // 
+            // roomTextBox
+            // 
+            this.roomTextBox.Location = new System.Drawing.Point(542, 31);
+            this.roomTextBox.Name = "roomTextBox";
+            this.roomTextBox.Size = new System.Drawing.Size(173, 21);
+            this.roomTextBox.TabIndex = 1;
+            // 
+            // enterButton
+            // 
+            this.enterButton.Location = new System.Drawing.Point(752, 20);
+            this.enterButton.Name = "enterButton";
+            this.enterButton.Size = new System.Drawing.Size(100, 40);
+            this.enterButton.TabIndex = 2;
+            this.enterButton.Text = "접속하기";
+            this.enterButton.UseVisualStyleBackColor = true;
+            this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
+            // 
             // playButton
             // 
-            this.playButton.Location = new System.Drawing.Point(639, 20);
+            this.playButton.Location = new System.Drawing.Point(641, 81);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(100, 40);
-            this.playButton.TabIndex = 1;
+            this.playButton.TabIndex = 3;
             this.playButton.Text = "게임시작";
             this.playButton.UseVisualStyleBackColor = true;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 12);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            // 
             // status
             // 
-            this.status.Location = new System.Drawing.Point(557, 79);
+            this.status.Location = new System.Drawing.Point(570, 144);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(272, 15);
-            this.status.TabIndex = 3;
-            this.status.Text = "게임을 시작해주세요";
+            this.status.TabIndex = 4;
+            this.status.Text = "방을 입력하여 접속해주세요.";
             this.status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SinglePlayForm
+            // MultiPlayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 541);
             this.Controls.Add(this.status);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.playButton);
+            this.Controls.Add(this.enterButton);
+            this.Controls.Add(this.roomTextBox);
             this.Controls.Add(this.boardPicture);
-            this.Name = "SinglePlayForm";
-            this.Text = "SinglePlayForm";
+            this.Name = "MultiPlayForm";
+            this.Text = "MultiPlayForm";
             ((System.ComponentModel.ISupportInitialize)(this.boardPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -95,8 +105,9 @@ namespace Client
         #endregion
 
         private System.Windows.Forms.PictureBox boardPicture;
+        private System.Windows.Forms.TextBox roomTextBox;
+        private System.Windows.Forms.Button enterButton;
         private System.Windows.Forms.Button playButton;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label status;
     }
 }
